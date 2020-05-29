@@ -21,6 +21,10 @@ public class UserService {
     }
 
     public User get(String username, String password) {
-        return userDao.fndByUsernameAndPassword(username, password);
+        return userDao.findByUsernameAndPassword(username, password);
+    }
+
+    public void add(User user) {
+        userDao.save(user);
     }
 }

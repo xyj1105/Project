@@ -3,17 +3,14 @@ package com.xyj.project.pojo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 //@Table(name = "user")
 @JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
 public class User {
     @Id
-//    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String username;
