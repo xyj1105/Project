@@ -3,6 +3,7 @@ package com.xyj.project.result;
 public class Result {
 
     private Integer code;
+
     private String msg;
 
     public Result(int code, String msg) {
